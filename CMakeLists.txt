@@ -10,8 +10,10 @@ SET(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wall")
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)  
 
 INCLUDE_DIRECTORIES(  
-      /usr/local/include  include 
+      /usr/include /usr/local/include  include 
 ) 
+
+add_definitions(-D__USE_POSIX)
 
 link_libraries(/usr/local/lib/libcurl.so.4.5.0)
 

@@ -16,6 +16,7 @@ int main(int argc,char** argv){
     command_init(&cmd,argv[0],"0.0.1");
     command_option(&cmd, "-f", "--file <arg>", "文件路径", file);
     command_parse(&cmd, argc, argv);
+    markc_upload_file();
     command_free(&cmd);
     return 0;
 }
